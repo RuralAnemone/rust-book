@@ -7,6 +7,8 @@ fn main() {
 
     let secret_number = rand::thread_rng().gen_range(1..=100);
 
+    let mut guesses: u32 = 0;
+
     loop {
         println!("guess a number!:");
 
@@ -26,11 +28,14 @@ fn main() {
 
         println!("your guess was: {}", guess);
 
+        // I actually kinda like the fact you can't use var++ or ++var cus it mitigates confusion
+        guesses += 1;
+
         match guess.cmp(&secret_number) {
             Ordering::Less => println!("too small (that's what she said)"),
             Ordering::Greater => println!("too big! (that ain't what she said)"),
             Ordering::Equal => {
-                println!("you win I guess");
+                println!("you win in {guesses} guesses");
                 break;
             }
         }
