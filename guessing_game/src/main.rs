@@ -1,6 +1,6 @@
-use std::io;
 use rand::Rng;
 use std::cmp::Ordering;
+use std::io;
 
 fn main() {
     println!("fun number guessin game");
@@ -8,7 +8,6 @@ fn main() {
     let secret_number = rand::thread_rng().gen_range(1..=100);
 
     loop {
-
         println!("guess a number!:");
 
         let mut guess = String::new();
@@ -33,7 +32,7 @@ fn main() {
             Ordering::Equal => {
                 println!("you win I guess");
                 break;
-            },
+            }
         }
     }
 }
