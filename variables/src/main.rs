@@ -1,6 +1,12 @@
 fn main() {
-    let mut x = 5;
-    println!("x = {x}");
-    x = 6;
-    println!("x = {x}");
+    let x = 5;
+
+    let x = x + 1;
+
+    {
+        let x = x * 2;
+        println!("inner x is {x}");
+    }
+
+    println!("outer x is {x}");
 }
