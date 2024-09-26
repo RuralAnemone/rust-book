@@ -1,4 +1,6 @@
 fn main() {
     let b = true;
-    let x = b?3:5;
+    let x = if b {3} else {5};
+
+    println!("{x}");
 }
