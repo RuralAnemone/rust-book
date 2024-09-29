@@ -1,8 +1,10 @@
 fn main() {
-    let b = true;
-    let x = if b {3} else {5};
-
-    loop {
-        println!("x is {x}!!!!");
+    for number in (1..4).rev() {
+        println!("t minus {number}");
     }
+
+    println!("bye lol");
+
+    let list = [5;10];
+    println!("{:?}", list)
 }
