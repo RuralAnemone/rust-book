@@ -7,9 +7,9 @@ fn main() {
 
     // nested for loop; outer counts i from 2 up to 12 (as first verse is slightly different), inner counts j down from i to 1
     for i in 2..=12 {
-        prelude(ordinals[i]);
-        for j in i..=2 {
-            println!("{}", lyrics[j]);
+        prelude(ordinals[i-1]);
+        for j in (2..=i).rev() {
+            println!("{}", lyrics[j-1]);
         }
         println!("and {}", lyrics[0]);
     }
